@@ -25,7 +25,7 @@ export const images = {
    * SOBRE MÍ — mujer joven, profesional, cercana
    * Foto: retrato natural de mujer joven sonriente
    */
-  about: `${UNS}/photo-1573496359142-b8d87734a5a2?w=900&q=85&fit=crop&auto=format`,
+  about: "/portrait-about.jpg",
 
   /**
    * SERVICIOS — fotos con relación temática, muy difuminadas en UI
