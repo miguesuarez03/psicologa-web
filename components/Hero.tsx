@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { site } from "@/lib/config";
+import { images } from "@/lib/images";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -21,27 +22,26 @@ export function Hero() {
       className="relative flex items-end overflow-hidden"
       style={{ minHeight: "100svh", maxHeight: "960px" }}
     >
-      {/* ── Background photo ── */}
+      {/* Background photo */}
       <div className="absolute inset-0">
         <Image
-          src="/portrait-hero.jpg"
-          alt={site.name}
+          src={images.hero}
+          alt="Consulta de Carmen Aunión"
           fill
           priority
           sizes="100vw"
           className="object-cover object-center"
         />
-        {/* Bottom-weighted dark gradient for text legibility */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(to bottom, rgba(10,8,6,0.05) 0%, rgba(10,8,6,0.10) 35%, rgba(10,8,6,0.50) 70%, rgba(10,8,6,0.72) 100%)",
+              "linear-gradient(to bottom, rgba(10,8,6,0.05) 0%, rgba(10,8,6,0.18) 40%, rgba(10,8,6,0.55) 75%, rgba(10,8,6,0.72) 100%)",
           }}
         />
       </div>
 
-      {/* ── Frosted glass card — anchored bottom-left ── */}
+      {/* Frosted glass card */}
       <div className="relative z-10 w-full px-6 pb-10 sm:px-8 sm:pb-14 lg:px-12 lg:pb-16">
         <motion.div
           initial={{ opacity: 0, y: 32 }}
@@ -54,7 +54,6 @@ export function Hero() {
             WebkitBackdropFilter: "blur(24px) saturate(1.6)",
           }}
         >
-          {/* Eyebrow */}
           <motion.span
             custom={0} variants={up} initial="hidden" animate="show"
             className="inline-flex items-center gap-2.5 text-[0.65rem] font-medium uppercase tracking-[0.22em] text-white/55"
@@ -63,7 +62,6 @@ export function Hero() {
             {site.hero.eyebrow}
           </motion.span>
 
-          {/* Headline */}
           <motion.h1
             custom={1} variants={up} initial="hidden" animate="show"
             className="text-[2.6rem] font-medium leading-[1.04] tracking-[-0.04em] text-white sm:text-[3.25rem]"
@@ -75,7 +73,6 @@ export function Hero() {
             </span>
           </motion.h1>
 
-          {/* Sub */}
           <motion.p
             custom={2} variants={up} initial="hidden" animate="show"
             className="text-[0.95rem] leading-[1.75] text-white/68"
@@ -83,7 +80,6 @@ export function Hero() {
             {site.hero.sub}
           </motion.p>
 
-          {/* CTAs */}
           <motion.div
             custom={3} variants={up} initial="hidden" animate="show"
             className="flex flex-wrap items-center gap-2"
@@ -103,7 +99,6 @@ export function Hero() {
             </a>
           </motion.div>
 
-          {/* Pillars */}
           <motion.div
             custom={4} variants={up} initial="hidden" animate="show"
             className="flex flex-wrap gap-2 border-t border-white/12 pt-4"

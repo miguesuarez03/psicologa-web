@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { site } from "@/lib/config";
+import { images } from "@/lib/images";
 import { Container } from "./ui/Container";
 import { Eyebrow } from "./ui/Eyebrow";
 import { Reveal } from "./ui/Reveal";
@@ -9,20 +10,18 @@ export function About() {
     <section id="sobre-mi" className="scroll-mt-24 border-t border-hair bg-paper py-28 lg:py-40">
       <Container>
         <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-2 lg:gap-24">
-          {/* Portrait */}
           <Reveal>
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-hair bg-paper-alt">
               <Image
-                src="/portrait-about.jpg"
-                alt={site.name}
+                src={images.about}
+                alt={`${site.name}, psicóloga`}
                 fill
                 sizes="(max-width: 1024px) 90vw, 45vw"
-                className="object-cover"
+                className="object-cover object-top"
               />
             </div>
           </Reveal>
 
-          {/* Text */}
           <div>
             <Reveal><Eyebrow>{site.about.eyebrow}</Eyebrow></Reveal>
             <Reveal delay={0.06}>
@@ -31,28 +30,21 @@ export function About() {
                 <span className="font-serif font-light italic">{site.about.titleAccent}</span>
               </h2>
             </Reveal>
-
             {site.about.paragraphs.map((p, i) => (
               <Reveal key={i} delay={0.1 + i * 0.06}>
                 <p className="mt-5 max-w-md text-[1.05rem] leading-relaxed text-muted">{p}</p>
               </Reveal>
             ))}
-
-            {/* Cards */}
             <Reveal delay={0.22}>
               <div className="mt-8 grid grid-cols-2 gap-3">
                 {site.about.cards.map((card) => (
                   <div key={card.title} className="rounded-xl border border-hair bg-paper-alt p-4">
-                    <p className="mb-1 text-[0.72rem] font-semibold uppercase tracking-[0.12em] text-accent">
-                      {card.title}
-                    </p>
+                    <p className="mb-1 text-[0.72rem] font-semibold uppercase tracking-[0.12em] text-accent">{card.title}</p>
                     <p className="text-[0.88rem] leading-relaxed text-muted">{card.text}</p>
                   </div>
                 ))}
               </div>
             </Reveal>
-
-            {/* CTA row */}
             <Reveal delay={0.28}>
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <a
@@ -68,9 +60,9 @@ export function About() {
                   className="flex items-center gap-1.5 text-[0.88rem] text-muted-soft transition-colors hover:text-ink"
                 >
                   <svg className="h-4 w-4 opacity-70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-                    <rect x="2" y="2" width="20" height="20" rx="5" />
-                    <circle cx="12" cy="12" r="5" />
-                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                    <rect x="2" y="2" width="20" height="20" rx="5"/>
+                    <circle cx="12" cy="12" r="5"/>
+                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
                   </svg>
                   @{site.contact.instagram}
                 </a>
