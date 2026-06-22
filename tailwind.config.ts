@@ -19,8 +19,8 @@ const config: Config = {
         // Hairlines / borders
         hair: "#E5E1D8",
         // The single sober accent: a deep, precise ink-blue
-        accent: "#1A2736",
-        "accent-hover": "#24344A",
+        accent: "#7A3E28",
+        "accent-hover": "#8F4A30",
       },
       fontFamily: {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
