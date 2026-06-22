@@ -5,7 +5,7 @@ import { Reveal } from "./ui/Reveal";
 export function Trust() {
   if (!site.trust.testimonials.length) return null;
   return (
-    <section className="bg-accent py-28 text-paper lg:py-36">
+    <section className="py-28 text-paper lg:py-36" style={{ backgroundColor: "#3B2314" }}>
       <Container>
         <Reveal>
           <span className="inline-flex items-center gap-3 text-[0.68rem] font-medium uppercase tracking-[0.22em] text-paper/45">
