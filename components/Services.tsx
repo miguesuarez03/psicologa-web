@@ -29,7 +29,7 @@ const icons = [
 
 export function Services() {
   return (
-    <section id="servicios" className="scroll-mt-24 border-y border-hair bg-paper-alt py-28 lg:py-40">
+    <section id="servicios" className="scroll-mt-24 border-y border-hair bg-paper-alt py-16 lg:py-24">
       <Container>
         {/* Intro */}
         <div className="grid grid-cols-1 items-end gap-8 lg:grid-cols-12 lg:gap-8">
@@ -69,8 +69,8 @@ export function Services() {
                     alt=""
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover opacity-[0.14] transition-opacity duration-700 group-hover:opacity-[0.22]"
-                    style={{ filter: "blur(8px) saturate(0.6)", transform: "scale(1.05)" }}
+                    className="object-cover opacity-[0.12] transition-opacity duration-700 group-hover:opacity-[0.22]"
+                    style={{ filter: "blur(3px) saturate(0.75)", transform: "scale(1.05)" }}
                     aria-hidden="true"
                   />
                 </div>

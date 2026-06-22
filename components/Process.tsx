@@ -5,7 +5,7 @@ import { Reveal } from "./ui/Reveal";
 
 export function Process() {
   return (
-    <section id="proceso" className="scroll-mt-24 bg-paper py-28 lg:py-40">
+    <section id="proceso" className="scroll-mt-24 bg-paper py-16 lg:py-24">
       <Container>
         <div className="max-w-xl">
           <Reveal><Eyebrow>{site.process.eyebrow}</Eyebrow></Reveal>
