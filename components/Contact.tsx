@@ -118,6 +118,7 @@ export function Contact() {
           {/* ── RIGHT: Calendly + Maps — start at the very top of the grid ── */}
           <Reveal delay={0.08} className="flex flex-col gap-4">
 
+            <div id="reservar" className="scroll-mt-24" />
             <div className="overflow-hidden rounded-2xl border border-hair bg-paper-alt">
               <CalendlyEmbed url={site.calendlyUrl} height={420} />
             </div>

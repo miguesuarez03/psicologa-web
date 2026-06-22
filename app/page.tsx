@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/Navbar";
+import { FloralSides } from "@/components/FloralSides";
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
 import { Services } from "@/components/Services";
@@ -11,6 +12,7 @@ import { Footer } from "@/components/Footer";
 export default function Home() {
   return (
     <>
+      <FloralSides />
       <Navbar />
       <main>
         <Hero />
