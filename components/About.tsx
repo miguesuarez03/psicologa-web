@@ -7,7 +7,7 @@ import { Reveal } from "./ui/Reveal";
 
 export function About() {
   return (
-    <section id="sobre-mi" className="scroll-mt-24 border-t border-hair bg-paper py-28 lg:py-40">
+    <section id="sobre-mi" className="scroll-mt-24 border-t border-hair bg-paper py-14 lg:py-20">
       <Container>
         <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-2 lg:gap-24">
           <Reveal>

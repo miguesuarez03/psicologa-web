@@ -45,7 +45,7 @@ function FaqItem({ q, a, index }: { q: string; a: string; index: number }) {
 
 export function FAQ() {
   return (
-    <section id="faq" className="scroll-mt-24 border-t border-hair bg-paper-alt py-28 lg:py-36">
+    <section id="faq" className="scroll-mt-24 border-t border-hair bg-paper-alt py-14 lg:py-20">
       <Container>
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
           {/* Left: title */}

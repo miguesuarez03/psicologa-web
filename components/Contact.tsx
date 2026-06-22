@@ -54,7 +54,7 @@ const contactItems = [
 
 export function Contact() {
   return (
-    <section id="contacto" className="scroll-mt-24 bg-paper py-28 lg:py-36">
+    <section id="contacto" className="scroll-mt-24 bg-paper py-14 lg:py-20">
       <Container>
         {/* Two columns aligned at the top — header lives inside the left column */}
         <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-2">
