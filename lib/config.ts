@@ -148,6 +148,37 @@ export const site = {
     text: "Elige el día y la hora que mejor te vengan. Sin llamadas, sin esperas. Primera sesión sin compromiso a 35€.",
   },
 
+  faq: [
+    {
+      q: "¿Es necesario haber ido al psicólogo antes para empezar?",
+      a: "No. Puedes venir sin ninguna experiencia previa en terapia. La primera sesión está pensada precisamente para que conozcamos cómo te sientes, qué te trae, y si el proceso tiene sentido para ti. No hay ningún punto de partida mínimo.",
+    },
+    {
+      q: "¿Qué pasa en la primera sesión?",
+      a: "Es una toma de contacto. Me cuentas qué te ocurre y yo escucho sin juzgar. A partir de ahí, te explico cómo podría ser el proceso y resolvemos cualquier duda. No tienes ningún compromiso de continuar si no lo sientes.",
+    },
+    {
+      q: "¿Por qué 35€? ¿Hay algo diferente en la calidad?",
+      a: "No. El precio reducido es parte de la filosofía de NoBu Psicología: creer que el acceso a la salud mental no debería depender de tu economía. Las sesiones tienen la misma calidad y supervisión que en cualquier consulta, simplemente priorizamos el acceso.",
+    },
+    {
+      q: "¿Con qué frecuencia se hacen las sesiones?",
+      a: "Lo habitual es una sesión por semana, especialmente al principio. Según avanza el proceso, la frecuencia puede ajustarse a lo que necesites. Tú marcas el ritmo.",
+    },
+    {
+      q: "¿Las sesiones son solo online?",
+      a: "Actualmente las sesiones son online, lo que permite que puedas conectarte desde donde estés, sin desplazamientos y en un entorno que ya conoces. Solo necesitas un lugar tranquilo y conexión a internet.",
+    },
+    {
+      q: "¿Cuánto tiempo dura un proceso terapéutico?",
+      a: "Depende de cada persona y de lo que traes. Algunos procesos duran unos meses, otros más. No existe una duración estándar porque cada situación es diferente. Lo importante es que el proceso tenga sentido para ti en cada momento.",
+    },
+    {
+      q: "¿Y si empiezo y no funciona?",
+      a: "Es una pregunta completamente válida. Si en algún momento sientes que el proceso no está avanzando, lo hablamos. La terapia también se trabaja en sesión. Y si en algún punto tiene más sentido derivarte a otro profesional, te lo digo con transparencia.",
+    },
+  ],
+
   nav: [
     { label: "Sobre mí", href: "#sobre-mi" },
     { label: "Servicios", href: "#servicios" },
