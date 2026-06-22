@@ -31,6 +31,7 @@ export function Services() {
   return (
     <section id="servicios" className="scroll-mt-24 border-y border-hair bg-paper-alt py-28 lg:py-40">
       <Container>
+        {/* Intro */}
         <div className="grid grid-cols-1 items-end gap-8 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-5">
             <Reveal><Eyebrow>{site.services.eyebrow}</Eyebrow></Reveal>
@@ -45,37 +46,62 @@ export function Services() {
           </Reveal>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 border-t border-hair sm:grid-cols-2 lg:mt-16 lg:grid-cols-3">
+        {/*
+          Grid con bordes limpios:
+          - border-t en el contenedor marca la línea superior
+          - Cada tarjeta tiene border-b y border-r
+          - Se elimina el border-r de la última columna con [&:nth-child(3n)]:border-r-0 en lg
+          - Se elimina el border-r de toda columna impar en sm con [&:nth-child(2n)]:sm:border-r-0
+        */}
+        <div className="mt-14 grid grid-cols-1 border-l border-t border-hair sm:grid-cols-2 lg:mt-16 lg:grid-cols-3">
           {site.services.items.map((item, i) => (
-            <Reveal key={item.label} delay={0.04 * (i % 3)}>
-              <div className="group relative flex min-h-[260px] flex-col gap-4 overflow-hidden border-b border-r border-hair p-7 transition-colors duration-500">
+            <Reveal
+              key={item.label}
+              delay={0.04 * (i % 3)}
+              className="flex h-full"
+            >
+              <div className="group relative flex w-full flex-col gap-4 overflow-hidden border-b border-r border-hair p-7 transition-colors duration-500">
+
                 {/* Blurred background photo */}
-                <div className="absolute inset-0 transition-opacity duration-700">
+                <div className="absolute inset-0">
                   <Image
                     src={images.services[i]}
                     alt=""
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover opacity-[0.15] transition-opacity duration-700 group-hover:opacity-[0.22]"
+                    className="object-cover opacity-[0.14] transition-opacity duration-700 group-hover:opacity-[0.22]"
                     style={{ filter: "blur(8px) saturate(0.6)", transform: "scale(1.05)" }}
                     aria-hidden="true"
                   />
                 </div>
 
-                {/* Content */}
+                {/* Icon */}
                 <div className="relative z-10 flex h-11 w-11 items-center justify-center rounded-xl border border-hair bg-paper/80 text-accent transition-all duration-500 group-hover:border-accent/20 group-hover:bg-accent group-hover:text-paper">
                   <div className="h-5 w-5">{icons[i]}</div>
                 </div>
+
+                {/* Number + title */}
                 <div className="relative z-10 flex flex-col gap-1.5">
                   <span className="text-[0.65rem] font-medium uppercase tracking-[0.18em] text-muted-soft">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <h3 className="text-[1.1rem] font-medium leading-snug tracking-tight text-ink">{item.label}</h3>
+                  <h3 className="text-[1.1rem] font-medium leading-snug tracking-tight text-ink">
+                    {item.label}
+                  </h3>
                 </div>
-                <p className="relative z-10 flex-1 text-[0.93rem] leading-relaxed text-muted">{item.text}</p>
+
+                {/* Description — flex-1 so all cards push tags to the bottom equally */}
+                <p className="relative z-10 flex-1 text-[0.93rem] leading-relaxed text-muted">
+                  {item.text}
+                </p>
+
+                {/* Tags */}
                 <div className="relative z-10 flex flex-wrap gap-1.5 pt-1">
                   {item.tags.map((tag) => (
-                    <span key={tag} className="rounded-full border border-hair/80 bg-paper/70 px-2.5 py-1 text-[0.65rem] uppercase tracking-[0.09em] text-muted-soft">
+                    <span
+                      key={tag}
+                      className="rounded-full border border-hair/80 bg-paper/70 px-2.5 py-1 text-[0.65rem] uppercase tracking-[0.09em] text-muted-soft"
+                    >
                       {tag}
                     </span>
                   ))}

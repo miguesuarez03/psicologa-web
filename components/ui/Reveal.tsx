@@ -40,7 +40,6 @@ export function Reveal({
   );
 }
 
-/** Staggered container — use with <Reveal> children for sequenced reveals. */
 export function RevealGroup({
   children,
   className = "",
